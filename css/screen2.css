@@ -1,5 +1,18 @@
-
-
+header, nav, section, footer {
+    display: block;
+}
+header {
+    background-color: yellow;
+}
+nav {
+    background-color: orange;
+}
+section {
+    background-color: yellowgreen;
+}
+footer {
+    background-color: deepskyblue;
+}
 
   /**\ * $normalize.css *\**//*! normalize.css v3.0.0 | MIT License | git.io/normalize 
   */
