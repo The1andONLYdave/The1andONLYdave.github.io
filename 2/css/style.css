@@ -52,7 +52,7 @@ color:#333;
 }
 /*---------- FORMS ----------*/
 
-input[type=text], input[type=submit], textarea {
+input[type=text], input[type=submit], input[type=email], textarea {
 	width: 100%;
 	padding: 0.5em;
 	font-size: 1em;
