@@ -620,6 +620,25 @@ section#team .align, section#contact .align {
 #theme-form input[type=text] {
 	height: 3.25em;
 }
+#theme-form input[type=email], .cform-form textarea {
+	background: rgba(227, 231, 228, 1);
+	font-family: 'Open Sans', sans serif;
+	border: 0;
+	text-align: left;
+	vertical-align: middle;
+}
+#theme-form input[type=email]:focus, .cform-form textarea:focus {
+	background: rgba(101, 106, 100, 1);
+	color: #eff1ef;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	transition: background 0.25 ease-in;
+	-moz-transition: background 0.25 ease-in;
+	-webkit-transition: background 0.25 ease-in;
+}
+#theme-form input[type=email] {
+	height: 3.25em;
 #theme-form input[type=submit] {
 	font-family: 'Patua One', cursive;
 	color: #fff;
