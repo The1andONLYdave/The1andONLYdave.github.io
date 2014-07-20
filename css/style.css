@@ -639,6 +639,7 @@ section#team .align, section#contact .align {
 }
 #theme-form input[type=email] {
 	height: 3.25em;
+}	
 #theme-form input[type=submit] {
 	font-family: 'Patua One', cursive;
 	color: #fff;
