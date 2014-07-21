@@ -11,8 +11,8 @@ destination: _site/blog
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Kulsch iT Blog
-tagline: Site Tagline
+title : Kulsch iT
+tagline: Der Blog über Neuigkeiten in der IT und was wir machen
 author :
   name : David-Lee Kulsch
   email : blogging@kulsch-it.de
@@ -72,11 +72,11 @@ JB :
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
   #
-  archive_path: /blog/archive.html
-  categories_path : /blog/categories.html
-  tags_path : /blog/tags.html
-  atom_path : /blog/atom.xml
-  rss_path : /blog/rss.xml
+  archive_path: archive.html
+  categories_path : categories.html
+  tags_path : tags.html
+  atom_path : atom.xml
+  rss_path : rss.xml
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
