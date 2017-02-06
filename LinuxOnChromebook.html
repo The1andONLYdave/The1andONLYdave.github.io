@@ -1,0 +1,47 @@
+Draft/Entwurf:
+
+Linux auf Chromebook via Crouton in Deutsch mit einigen Emulatoren und Sprachpaketen mit Fixes für Acer R11
+
+1. linux
+crouton runterladen in den downloadordner
+strg+alt+t drücken
+shell (eintippen,enter)(vorher developermodus aktivieren am chromebook)
+cd
+cd Downloads
+sudo sh crouton -r xenial -t xfce-desktop,xorg,extension,keyboard
+
+danach frägt er nach username und passwort, das wird das admin passwort vom linux (nicht vom chromebook!)
+
+
+2. im Linux Spiele, Programme, Emulatoren:
+sudo add-apt-repository ppa:libretro/stable #fürEmulatoren
+sudo apt-get update
+sudo add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"  #fürFlash
+
+sudo apt-get install dosbox wesnoth-1.12 conky-all steam wine playonlinux winetricks git dialog vlc retroarch libretro-genesisplusgx libretro-mednafen-psx  libretro-quicknes libretro-nestopia libretro-mupen64plus libretro-snes9x-next libretro-vba-next libretro-vbam libretro-gpsp atop htop terminator pcmanfm mc gimp-help-de gimp gparted adobe-flashplugin nano language-pack-gnome-de language-pack-gnome-de-base language-pack-de-base language-pack-de
+
+3. für die sicherheit noch im chromeos ein "shell"-admin passwort setzen:
+strg+alt+T
+shell
+sudo chromeos-setdevpasswd
+
+(man hat dann drei passwörter: 1. das vom chromeOS(googleaccount), 2. das vom linux (siehe 1.), das vom chromeOS-Admin (siehe 3.)
+
+*wichtig* Acer chromebook linux nur schwarzer Bildschirm, dann einmalig:
+sudo cp /mnt/stateful_partition/crouton/chroots/xenial2/etc/crouton/xorg-intel-sna.conf /mnt/stateful_partition/crouton/chroots/xenial2/usr/share/X11/xorg.conf.d/20-crouton.conf und dann in dieser datei  noch folgende zeile ändern "   Option     "AccelMethod" "uxa"" (uxa statt sna)
+
+teamviewer von webseite laden (dateiname.deb) für ubuntu
+dann in terminal im linux : sudo dpkg -i pfad/dateiname.deb , dann ein sudo apt-get install -f , dann nohcmla sudo dpkg -i dateiname.deb
+
+texteditor: wget https://download.sublimetext.com/sublime-text_build-3126_amd64.deb dann genauso installieren mit dpkg -i wie teamviewer
+
+deutsch: im linxux sudo gnome-language-selector
+
+java: 
+sudo apt-get install openjdk-8-jre icedtea-8-plugin 
+
+performance: window-manager-tweaks in den linux einstellungen: tab composition: alles deaktivieren
+
+deutsch umstellen:
+sudo update-locale LANG="de_DE.UTF-8" LANGUAGE="de:en"
+neustarten
